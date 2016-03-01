@@ -19,3 +19,9 @@ class TwitterApi(object):
 
 if __name__ == '__main__':
     from credentials import API_KEY, API_SECRET, ACCESS_TOKEN, TOKEN_SECRET
+
+    try:
+        keyword = sys.argv[1]
+    except IndexError:
+        keyword = None
+        exit('please provide a keyword')
