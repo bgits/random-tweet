@@ -24,6 +24,7 @@ class TwitterApi(object):
             tweets = self._session.get(url).json()['statuses']
             return random.choice(tweets)
 
+
 if __name__ == '__main__':
     from credentials import API_KEY, API_SECRET, ACCESS_TOKEN, TOKEN_SECRET
 
@@ -34,3 +35,6 @@ if __name__ == '__main__':
     except IndexError:
         keyword = None
         exit('please provide a keyword')
+
+    random_tweet = api.get_random_tweet(keyword)
+    print(random_tweet['text'])
