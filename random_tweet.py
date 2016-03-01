@@ -16,13 +16,13 @@ class TwitterApi(object):
                                       access_token,
                                       token_secret)
 
-        def get_random_tweet(self, keyword):
-            url = '{base_url}?q={keyword}'.format(
-                base_url=self.BASE_URL,
-                keyword=keyword
-            )
-            tweets = self._session.get(url).json()['statuses']
-            return random.choice(tweets)
+    def get_random_tweet(self, keyword):
+        url = '{base_url}?q={keyword}'.format(
+            base_url=self.BASE_URL,
+            keyword=keyword
+        )
+        tweets = self._session.get(url).json()['statuses']
+        return random.choice(tweets)
 
 
 if __name__ == '__main__':
