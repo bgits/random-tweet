@@ -15,3 +15,7 @@ class TwitterApi(object):
                                       consumer_secret,
                                       access_token,
                                       token_secret)
+
+
+if __name__ == '__main__':
+    from credentials import API_KEY, API_SECRET, ACCESS_TOKEN, TOKEN_SECRET
